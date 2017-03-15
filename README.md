@@ -1,4 +1,4 @@
-# poc-ethereum
+# poc-ethereum - test networks
 Ethereum configuration to work in private network.
 
 Install geth, see https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum.
