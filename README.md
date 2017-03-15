@@ -76,10 +76,10 @@ etm = eth.getBlock("latest").difficulty / eth.hashrate
 Math.floor(etm / 3600.) + "h " + Math.floor((etm % 3600)/60) + "m " +  Math.floor(etm % 60) + "s"
 ```
 Start mining with thread numbers.
-```shell
+```javascript
 miner.star(4)
 ```
 Stop mining.
-```shell
+```javascript
 miner.stop()
 ```
