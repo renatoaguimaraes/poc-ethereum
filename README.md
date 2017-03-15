@@ -45,3 +45,9 @@ Initialize node on miner mode.
 ```shell
 geth --fast --cache=2048 --jitvm --rpc  --datadir "/path/ethereum/data" --mine
 ```
+
+Attach console via ipc file.
+```shell
+geth attach /path/ethereum/data/geth.ipc
+```
+```
