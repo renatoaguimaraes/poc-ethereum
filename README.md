@@ -50,4 +50,3 @@ Attach console via ipc file.
 ```shell
 geth attach /path/ethereum/data/geth.ipc
 ```
-```
