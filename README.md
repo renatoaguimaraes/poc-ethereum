@@ -83,3 +83,5 @@ Stop mining.
 ```javascript
 miner.stop()
 ```
+
+See more http://ethdocs.org/en/latest/network/test-networks.html
