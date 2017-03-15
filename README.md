@@ -3,6 +3,8 @@ Ethereum configuration to work in private network.
 
 Install geth, see https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum.
 
+### Configuration
+
 Initialize node.
 ```shell
 geth --datadir "/path/ethereum/data"
@@ -41,12 +43,36 @@ Configure custom node.
 geth --datadir "/path/ethereum/data" init CustomGenesis.json
 ```
 
-Initialize node on miner mode.
+Initialize node.
 ```shell
-geth --fast --cache=2048 --jitvm --rpc  --datadir "/path/ethereum/data" --mine
+geth --fast --cache=2048 --jitvm --rpc  --datadir "/path/ethereum/data"
 ```
+
+### Console
 
 Attach console via ipc file.
 ```shell
 geth attach /path/ethereum/data/geth.ipc
+```
+Set default account.
+```javascript
+web3.eth.defaultAccount = '0xbed632ceb41f15983cca84f67203696b6ab499ab'
+```
+Get balance account.
+```javascript
+web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]), "ether")
+```
+Hash time estimate
+```javascript
+etm = eth.getBlock("latest").difficulty / eth.hashrate
+
+Math.floor(etm / 3600.) + "h " + Math.floor((etm % 3600)/60) + "m " +  Math.floor(etm % 60) + "s"
+```
+Start mining with thread numbers.
+```shell
+miner.star(4)
+```
+Stop mining.
+```shell
+miner.stop()
 ```
