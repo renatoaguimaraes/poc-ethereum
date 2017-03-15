@@ -58,14 +58,21 @@ Set default account.
 ```javascript
 web3.eth.defaultAccount = '0xbed632ceb41f15983cca84f67203696b6ab499ab'
 ```
+Set ether database.
+```javascript
+miner.setEtherbase(personal.listAccounts[0])
+```
 Get balance account.
 ```javascript
 web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]), "ether")
 ```
+Set extra data
+```javascript
+miner.setExtra("renato.guimaraes")
+```
 Hash time estimate
 ```javascript
 etm = eth.getBlock("latest").difficulty / eth.hashrate
-
 Math.floor(etm / 3600.) + "h " + Math.floor((etm % 3600)/60) + "m " +  Math.floor(etm % 60) + "s"
 ```
 Start mining with thread numbers.
